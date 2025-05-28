@@ -1,6 +1,6 @@
 # NeuroWellbeing - Landing Page
 
-![Banner Clínica NeuroWellbeing](assets/banner.png)
+![Banner Clínica NeuroWellbeing](./public/20250528_1107_Banner%20Clínica%20NeuroWellbeing_remix_01jwb5qzscfb7vkpzq7n0reza6.png)
 
 Este repositório contém o código-fonte da landing page para a Clínica NeuroWellbeing.
 
