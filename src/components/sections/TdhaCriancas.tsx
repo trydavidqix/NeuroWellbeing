@@ -24,7 +24,7 @@ export default function TdhaC() {
       <div className="max-w-5xl mx-auto">
         {/* Botão Voltar */}
         <button
-          onClick={() => navigate(-1)}
+          onClick={() => navigate("/#/")}
           className="inline-flex items-center text-primary-600 hover:text-primary-800 mb-8 mt-8"
         >
           <FaArrowLeft className="mr-2" /> Voltar

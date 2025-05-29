@@ -13,25 +13,21 @@ const contactInfo = [
     icon: FaPhone,
     title: "Telefone",
     content: "(11) 9999-9999",
-    link: "tel:+5511999999999",
   },
   {
     icon: FaWhatsapp,
     title: "WhatsApp",
     content: "(11) 9999-9999",
-    link: "https://wa.me/5511999999999",
   },
   {
     icon: FaEnvelope,
     title: "E-mail",
     content: "contato@neurowellbeing.com.br",
-    link: "mailto:contato@neurowellbeing.com.br",
   },
   {
     icon: FaMapMarkerAlt,
     title: "Endereço",
     content: "Av. Paulista, 1000 - Bela Vista, São Paulo - SP",
-    link: "https://maps.google.com/?q=Av.+Paulista,+1000+-+Bela+Vista,+São+Paulo+-+SP",
   },
 ];
 
@@ -200,7 +196,6 @@ export default function Contact() {
                 {contactInfo.map((info) => (
                   <a
                     key={info.title}
-                    href={info.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-4 text-gray-600 hover:text-primary-600 transition-colors duration-200"
@@ -222,15 +217,15 @@ export default function Contact() {
             {/* Mapa */}
             <div className="rounded-xl overflow-hidden shadow-lg h-[300px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.097696682099!2d-46.6539053!3d-23.5646162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1647881234567!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12096.108003001646!2d-46.65568035!3d-23.56267895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2sS%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1678880400000!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
-                allowFullScreen
+                allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Localização da Clínica"
-              />
+                title="Localização em São Paulo, SP"
+              ></iframe>
             </div>
           </motion.div>
         </div>

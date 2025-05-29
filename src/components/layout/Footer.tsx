@@ -8,16 +8,19 @@ import {
 
 const footerLinks = {
   clínica: [
-    { name: "Sobre Nós", href: "#about" },
-    { name: "Especialidades", href: "#specialties" },
-    { name: "Equipe", href: "#about" },
-    { name: "Contato", href: "#contact" },
+    { name: "Sobre Nós", href: "##about" },
+    { name: "Especialidades", href: "##specialties" },
+    { name: "Equipe", href: "##about" },
+    { name: "Contato", href: "##contact" },
   ],
   serviços: [
-    { name: "TDAH em Crianças", href: "#specialties" },
-    { name: "TDAH em Adultos", href: "#specialties" },
-    { name: "Avaliação Neuropsicológica", href: "#specialties" },
-    { name: "Psicoterapia", href: "#specialties" },
+    { name: "TDAH em Crianças", href: "#/especialidades/tdah-criancas" },
+    { name: "TDAH em Adultos", href: "#/especialidades/tdah-adultos" },
+    {
+      name: "Avaliação Neuropsicológica",
+      href: "#/especialidades/avaliacao-neuro",
+    },
+    { name: "Psicoterapia", href: "#/especialidades/psicoterapia" },
   ],
   legal: [
     { name: "Termos de Uso", href: "#" },
@@ -136,8 +139,10 @@ export default function Footer() {
               reservados.
             </p>
             <p className="text-gray-400 text-sm mt-4 md:mt-0">
-              Desenvolvido por {" "}
-              <a href="https://github.com/trydavidqix" target="_blank">David William</a>
+              Desenvolvido por{" "}
+              <a href="https://github.com/trydavidqix" target="_blank">
+                David William
+              </a>
             </p>
           </div>
         </div>
