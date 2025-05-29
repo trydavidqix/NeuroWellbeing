@@ -30,22 +30,18 @@ const socialLinks = [
   {
     name: "Facebook",
     icon: FaFacebook,
-    href: "https://facebook.com",
   },
   {
     name: "Instagram",
     icon: FaInstagram,
-    href: "https://instagram.com",
   },
   {
     name: "LinkedIn",
     icon: FaLinkedin,
-    href: "https://linkedin.com",
   },
   {
     name: "WhatsApp",
     icon: FaWhatsapp,
-    href: "https://wa.me/5511999999999",
   },
 ];
 
@@ -70,8 +66,6 @@ export default function Footer() {
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
-                  href={social.href}
-                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-primary-400 transition-colors duration-200"
                   aria-label={social.name}
@@ -142,7 +136,8 @@ export default function Footer() {
               reservados.
             </p>
             <p className="text-gray-400 text-sm mt-4 md:mt-0">
-              Desenvolvido com ❤️ para cuidar da sua saúde mental
+              Desenvolvido por {" "}
+              <a href="https://github.com/trydavidqix" target="_blank">David William</a>
             </p>
           </div>
         </div>

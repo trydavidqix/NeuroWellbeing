@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
 import { FaChild, FaUser, FaBrain, FaComments } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -49,8 +48,8 @@ const specialties = [
 ];
 
 export default function Specialties() {
-  const sectionRef = useRef(null);
-  const cardsRef = useRef([]);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<Array<HTMLDivElement | null>>([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {

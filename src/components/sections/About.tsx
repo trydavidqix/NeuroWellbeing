@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
 import { FaUserMd, FaHeart, FaBrain, FaHandshake } from "react-icons/fa";
 
@@ -31,8 +30,8 @@ const features = [
 ];
 
 export default function About() {
-  const sectionRef = useRef(null);
-  const cardsRef = useRef([]);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<Array<HTMLDivElement | null>>([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -139,7 +138,7 @@ export default function About() {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"
+                src="https://i.imgur.com/qiSuC4X.png"
                 alt="Equipe médica em reunião"
                 className="rounded-xl shadow-lg w-full h-[400px] object-cover"
               />
