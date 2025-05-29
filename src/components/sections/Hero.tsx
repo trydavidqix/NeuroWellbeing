@@ -7,28 +7,34 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   const heroRef = useRef(null);
-  const textRef = useRef(null);
+  const textRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Animação do texto
-      gsap.from(textRef.current.children, {
-        y: 100,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power4.out",
-      });
+      if (textRef.current) {
+        gsap.set(textRef.current.children, { y: 0, opacity: 1 });
+        gsap.from(textRef.current.children, {
+          y: 100,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: "power4.out",
+        });
+      }
 
       // Animação da imagem
-      gsap.from(imageRef.current, {
-        x: 100,
-        opacity: 0,
-        duration: 1.2,
-        delay: 0.5,
-        ease: "power4.out",
-      });
+      if (imageRef.current) {
+        gsap.set(imageRef.current, { x: 0, opacity: 1, scale: 1 });
+        gsap.from(imageRef.current, {
+          x: 100,
+          opacity: 0,
+          duration: 1.2,
+          delay: 0.5,
+          ease: "power4.out",
+        });
+      }
     }, heroRef);
 
     return () => ctx.revert();
